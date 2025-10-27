@@ -1,4 +1,4 @@
-import { getWeekDays, formatDate, normalizeDate, isDateInRange } from '@/utils/date';
+import { getWeekDays, formatDate, isDateInRange } from '@/utils/date';
 import { format } from 'date-fns';
 import type { TaskBlock } from '@/types';
 import { TaskBlockItem } from './TaskBlock/TaskBlockItem';
@@ -53,7 +53,7 @@ export function WeeklyTaskList({
   // 토/일요일 필터링
   const filteredWeekDays = showWeekend 
     ? weekDays 
-    : weekDays.filter((day, index) => {
+    : weekDays.filter((day) => {
         const dayOfWeek = day.getDay();
         return dayOfWeek !== 0 && dayOfWeek !== 6; // 0: 일요일, 6: 토요일
       });

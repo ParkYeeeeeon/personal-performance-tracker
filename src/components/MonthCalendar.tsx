@@ -106,8 +106,6 @@ export function MonthCalendar({ selectedDate, tasks, events, onDateClick }: Mont
   // 한국 공휴일 체크 (2024년 기준, 간단한 구현)
   const isHoliday = (day: Date): boolean => {
     const year = day.getFullYear();
-    const month = day.getMonth() + 1;
-    const date = day.getDate();
     
     // 신정, 설날, 어린이날, 어버이날, 현충일, 광복절, 추석, 개천절, 한글날, 크리스마스
     const holidays = [

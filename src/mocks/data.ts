@@ -1,4 +1,4 @@
-import type { AppData, TaskBlock, RoutinePreset, Bookmark } from '@/types';
+import type { AppData } from '@/types';
 
 export const mockData: AppData = {
   tasks: [

@@ -50,7 +50,6 @@ export function BookmarkManager({
   });
 
   const folders = bookmarks.filter(b => b.isFolder);
-  const items = bookmarks.filter(b => !b.isFolder);
 
   const toggleFolder = (folderId: string) => {
     const newExpanded = new Set(expandedFolders);
@@ -60,10 +59,6 @@ export function BookmarkManager({
       newExpanded.add(folderId);
     }
     setExpandedFolders(newExpanded);
-  };
-
-  const getChildren = (parentId?: string) => {
-    return bookmarks.filter(b => !b.isFolder && b.parentId === parentId);
   };
 
   const getFolderChildren = (folderId: string) => {

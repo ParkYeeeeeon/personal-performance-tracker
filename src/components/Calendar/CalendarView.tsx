@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { format, addWeeks, subWeeks } from 'date-fns';
-import { getWeekDays, formatDate, normalizeDate, isDateInRange } from '@/utils/date';
+import { getWeekDays, formatDate, isDateInRange } from '@/utils/date';
 import type { TaskBlock, CalendarEvent } from '@/types';
 
 interface CalendarViewProps {
